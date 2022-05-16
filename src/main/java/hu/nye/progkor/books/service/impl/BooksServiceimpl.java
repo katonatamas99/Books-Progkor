@@ -7,7 +7,6 @@ import hu.nye.progkor.books.model.exception.NotFoundException;
 import hu.nye.progkor.books.service.BooksService;
 import org.springframework.stereotype.Service;
 
-import java.awt.print.Book;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -25,10 +24,7 @@ public class BooksServiceimpl implements BooksService {
         return Collections.unmodifiableList(Db);
     }
 
-    @Override
-    public Books GetBooks(Long id) {
-        return null;
-    }
+
 
     @Override
     public Books getBooks(Long id) {
@@ -39,14 +35,14 @@ public class BooksServiceimpl implements BooksService {
     }
 
     @Override
-    public Books createBook(Books books) {
-        books.setId(getLastId());
+    public Books createBook(Books books){
+        books.setId(NextId());
         Db.add(books);
         return books;
     }
 
     @Override
-    public Books updateBook(Long id, Books booksUpdate) {
+    public Books updateBook(final Long id, final Books booksUpdate) {
         final Books books = getBooks(id);
         books.setName(booksUpdate.getName());
         books.setKat(booksUpdate.getKat());
@@ -59,7 +55,7 @@ public class BooksServiceimpl implements BooksService {
     final Books books =getBooks(id);
     Db.remove(books);
     }
-    private long NextId() {
+    public long NextId() {
         return getLastId() +1L;
     }
     private Long getLastId(){

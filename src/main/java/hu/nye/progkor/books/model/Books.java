@@ -53,8 +53,8 @@ public class Books {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Books books = (Books) o;
+        if (!(o instanceof Books)) return false;
+        final Books books = (Books) o;
         return Objects.equals(id, books.id) && Objects.equals(name, books.name) && kat == books.kat && hossz == books.hossz;
     }
 

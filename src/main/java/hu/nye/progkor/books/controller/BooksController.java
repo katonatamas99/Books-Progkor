@@ -9,12 +9,12 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/v1/books")
+@RequestMapping("/books")
 public class BooksController {
-    //Cruda
+    //CRUD
     private final BooksService booksService;
 
-    public BooksController(BooksService booksService) {
+    public BooksController(final BooksService booksService) {
         this.booksService = booksService;
     }
 
@@ -22,19 +22,19 @@ public class BooksController {
     public List<Books> getAllBooks() {
         return booksService.getAllBooks();
     }
-    @GetMapping
-    Books GetBooks(@PathVariable("id")final Long id){
+    @GetMapping("/{id}")
+    Books getBooks(@PathVariable("id")final Long id){
         return booksService.getBooks(id);
     }
     @PostMapping
     Books createBook(final @RequestBody Books books){
 return booksService.createBook(books);
     }
-@PutMapping
+@PutMapping("/{id}")
     Books updateBook(final @PathVariable Long id,final @RequestBody Books booksUpdate) {
-    return booksService.updateBook(id, booksUpdate);
+    return booksService.updateBook(id,booksUpdate);
 }
-        @DeleteMapping
+        @DeleteMapping("/{id}")
     ResponseEntity<Void> deleteBook(final @PathVariable Long id) {
             booksService.deleteBook(id);
             return new ResponseEntity<>(HttpStatus.NO_CONTENT);
