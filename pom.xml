@@ -62,7 +62,7 @@
         <repository>
             <id>github</id>
             <name>GitHub Packages</name>
-            <url>https://github.com/katonatamas99/Progkorny_Books</url>
+            <url>https://maven.pkg.github.com/katonatamas99/Progkorny_Books</url>
         </repository>
     </distributionManagement>
 
