@@ -6,9 +6,7 @@
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>2.6.7</version>
-		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	
 	<artifactId>books</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>books</name>
@@ -17,6 +15,10 @@
 		<java.version>17</java.version>
 	</properties>
 	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-thymeleaf</artifactId>
+		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
@@ -36,7 +38,7 @@
 		<dependency>
 			<groupId>org.webjars</groupId>
 			<artifactId>webjars-locator</artifactId>
-			<version>0.42</version>
+			<version>0.45</version>
 		</dependency>
 		<dependency>
 			<groupId>org.webjars</groupId>
@@ -47,13 +49,20 @@
 	</dependencies>
 
 	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+
+		</plugins>
 	</build>
 
     <distributionManagement>
         <repository>
             <id>github</id>
             <name>GitHub Packages</name>
-            <url>https://maven.pkg.github.com/katonatamas99/Books-Progkor</url>
+            <url>https://maven.pkg.github.com/katonatamas99/katonatamas99/Books-Progkor</url>
         </repository>
     </distributionManagement>
 
