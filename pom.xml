@@ -64,7 +64,7 @@
 		<repository>
             <id>github</id>
             <name>GitHub Packages</name>
-            <url>https://maven.pkg.github.com/zoltan-pal/Books-Progkor</url>
+            <url>https://maven.pkg.github.com/katonatamas99/Books-Progkor</url>
         </repository>
     </distributionManagement>
 
