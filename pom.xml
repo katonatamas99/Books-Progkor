@@ -7,7 +7,7 @@
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>2.6.7</version>
 	</parent>
-	<groupId>hu.nye.progkor</groupId>
+	<groupId>hu.nye.progkor.books</groupId>
 	<artifactId>books-maven-deploy-test</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>books</name>
