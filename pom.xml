@@ -157,7 +157,7 @@
         <repository>
             <id>github</id>
             <name>GitHub Packages</name>
-            <url>https://maven.pkg.github.com/epam-nye-cooperation/epam-nye-progkor-roleplay</url>
+            <url>https://maven.pkg.github.com/epam-nye-cooperation/katonatamas99/Books-Progkor</url>
         </repository>
     </distributionManagement>
 
