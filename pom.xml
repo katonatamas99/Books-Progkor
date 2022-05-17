@@ -6,7 +6,6 @@
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>2.6.7</version>
-		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>hu.nye.progkor</groupId>
 	<artifactId>books-maven-deploy-test</artifactId>
@@ -63,10 +62,10 @@
 
 	<distributionManagement>
 		<repository>
-			<id>github</id>
-			<name>GitHub Packages</name>
-			<url>https://maven.pkg.github.com/katonatamas99/Books-Progkor</url>
-		</repository>
-	</distributionManagement>
+            <id>github</id>
+            <name>GitHub Packages</name>
+            <url>https://maven.pkg.github.com/zoltan-pal/Books-Progkor</url>
+        </repository>
+    </distributionManagement>
 
 </project>
